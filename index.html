@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ALARMA</title>
+		<!-- Bootstrap -->
+		<link rel="stylesheet" href="bootstrap\dist\css\bootstrap.min.css" />
+		<!-- Bootstrap Iconos-->
+		<link
+			rel="stylesheet"
+			href="node_modules\bootstrap-icons\font\bootstrap-icons.css" />
+		<!-- Estilos CSS -->
+		<link rel="stylesheet" href="alarma.css" />
+		<!-- Icono de pestaña -->
+		<link rel="shortcut icon" href="alarm.svg" type="image/x-icon" />
+    <script src="bootstrap\dist\js\bootstrap.bundle.min.js"></script>
+	</head>
+	<body>
+		<!-- Audio de alarma -->
+		<audio id="audio" src="alarma.mp3"></audio>
+
+		<div class="container">
+			<div class="row">
+        <div class="col-md-4">
+
+        </div>
+				<div class="col-md-4">
+					<div class="card card-color">
+						<div class="card-header">
+							<div class="card-body">
+								<form
+                class="formulario"
+									action="javascript:void(0);"
+									method="post"
+									onsubmit="Alarma()">
+							
+              <label for="">
+							Seleccione hora
+              </label><br>
+									Hora:
+									<input
+										class="form-control times"
+										type="number"
+										name="hor"
+										id="hor" 
+
+
+										pattern="[1-12] {1}"
+										/>
+									<br>
+									Minutos:
+									<input
+										class="form-control times"
+										type="number"
+										name="min"
+										id="min" 
+
+
+										
+										pattern="[1-12] {1}"
+										/>
+									<br>
+									<div class="botones">
+										<select
+										class="momento"
+										name="momento"
+										id="momento">
+										<option value="am">am</option>
+										<option value="pm">pm</option>
+									</select>
+
+									<button id="alarma" class="btn active" type="submit">
+										Activar
+									</button>
+									</div>
+									<br>
+								</form>
+                <form
+									action="javascript:void(0);"
+									method="post"
+									onsubmit="editar()">
+                  <button id="pantalla" style="top: 500; left: 150" type="submit">Alarma: 00 : 00 -- 
+                  </button>
+                </form>
+                <div
+                id="reloj"
+                style="top: 300; left: 50; display: inline-block"></div>
+							</div>
+						</div>
+            <div id="dt-alarma">
+
+            <div class="col-md-4">
+            </div>
+					</div>
+					<div id="notificacion">
+						La alarma sonara dentro de 10 minutos
+            <div class="col-md-4">
+            </div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="alarma.js"></script>
+	</body>
+</html>

@@ -1,0 +1,224 @@
+
+body {
+    background: #474545;
+    font-size: large;
+    color: #48e;
+    margin: 10px;
+}
+
+p {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.formulario {
+    display: none;
+}
+
+.minute {
+    margin-left: 60px;
+}
+
+.horario {
+    margin-left: 35px;
+}
+
+/* .container {
+    width: 300px !important;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 5% !important;
+    flex-wrap: wrap;
+} */
+
+.card-body {
+    
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 5% !important;
+    font-size: 25px;
+    /* flex-wrap: wrap; */
+}
+
+.momento {
+    margin-top: 5px;
+    height: 41px;
+    width: 90px;
+}
+
+.active {
+    /* display: block; */
+    margin-bottom: 0px;
+    /* margin-left:  70px; */
+}
+
+input{
+    height: 30px;
+    outline: none;
+    width: 20px;
+    
+
+}
+
+input::placeholder {
+    color:#000;
+    font-size: large;
+    
+}
+
+#dt-alarma {
+    display: flex;
+}
+
+#notificacion {
+    display: none;
+}
+
+.posponer, .detener {
+    display: inline-block;
+    margin: 0 26px;
+    margin-top: 3px;
+    border-radius: 5px;
+    padding: 0;
+    border: 1px solid #306cc7;
+    position: relative;
+    animation-name: aumentar;
+    animation-duration: 0.5s;
+    /* velocidad de la animacion */
+    animation-timing-function: cubic-bezier(1, -0.05, 1, 0.33);
+    /* cantidad de veces de la animacion */
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    background: #13345e;
+}
+
+.editar {
+    display: inline-block;
+    margin-top: 0px;
+    margin-left: 200px;
+    margin-bottom: 50px;
+    
+}
+
+select, button{
+    height: 40px;
+    margin: auto;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+#pantalla{
+    display: flex;;
+    color: #000;
+    height: 40px;
+    width: 170px;
+    /* margin-top: 180px !important; */
+    /* margin-right: 180px !important; */
+
+}
+
+input, select, button, #pantalla{
+    margin-top: 3px;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #306cc7;
+    background-color: #50537c;
+    color: #000;
+    font-size: large;
+}
+
+.card-color {
+    background: #2c2e33;
+    color: #9b72dd;
+}
+
+.times {
+    background: #2c3646;
+    border: 2px solid #9b72dd;
+    font-size: larger;
+    color: #000000;
+
+}
+
+.times:focus{
+    background: #2c3646;
+    border: 2px solid #9b72dd;
+    font-size: medium;
+}
+
+i {
+    background: transparent;
+    font-size: 80px;
+    border-radius: 50%;
+    margin: 20px 70px;
+    position: relative;
+    animation-name: desplazarse;
+    animation-duration: 1s;
+    /* velocidad de la animacion */
+    animation-timing-function: cubic-bezier(1, -0.05, 1, 0.33);
+    /* cantidad de veces de la animacion */
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    /* color: black; */
+}
+
+
+@keyframes desplazarse {
+    0% {
+        color: blue;
+        
+    }
+
+    10% {
+        color: red;
+        
+    }
+
+    20% {
+        /* left: 5%; */
+        color: green;
+        
+        
+    }
+}
+
+
+@keyframes aumentar {
+    0% {
+        width: 80px;
+        height: 30px;
+        /* background: #8dc730; */
+        
+    }
+
+    /* 50% {
+        background: red;
+        width: 85px;
+        height: 35px;
+        
+    } */
+
+    100% {
+        width: 70px;
+        height: 35px;
+        /* background: green; */
+        /* top: 4%; */
+    }
+}
+
+
