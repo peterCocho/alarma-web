@@ -86,7 +86,7 @@ function validacionTiempo() {
     relog()
     // comparar hora con alarma programada
     if (temporizador == localStorage.getItem('sonar') && segundos < 3) {
-      let alarmaActiva = "file:///C:/Users/Hp/Desktop/JS_ejercicios_resueltos/alarma.html";
+      let alarmaActiva = "https://petercocho.github.io/alarma-web/";
       ventana = window.open(alarmaActiva);
       activarAlarma();
     }
